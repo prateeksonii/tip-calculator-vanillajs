@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <img src="./images/logo.svg" alt="main logo" />
+      </header>
+      <main>
+        <!-- Bill input -->
+        <label for="bill" class="bill">
+          <div>Bill</div>
+          <div class="input-container">
+            <img class="dollar" src="./images/icon-dollar.svg" alt="dollar icon" />
+            <input id="bill" type="number" />
+          </div>
+        </label>
+
+        <!-- Select tip -->
+        <div class="tip-container">
+          <div>Select Tip %</div>
+          <div class="grid">
+            <div class="tip-card" id="tip-5">5%</div>
+            <div class="tip-card" id="tip-10">10%</div>
+            <div class="tip-card" id="tip-15">15%</div>
+            <div class="tip-card" id="tip-25">25%</div>
+            <div class="tip-card" id="tip-50">50%</div>
+            <div class="tip-card">Custom</div>
+          </div>
+        </div>
+
+        <!-- Number of people -->
+        <label for="people" class="people">
+          <div>Number of People</div>
+          <div class="input-container">
+            <img class="dollar" src="./images/icon-person.svg" alt="person icon" />
+            <input id="people" type="number" />
+          </div>
+        </label>
+
+        <!-- summary -->
+        <div class="card">
+          <div class="card-item">
+            <div class="card-label">
+              <p class="main">Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="amount" id="tipPerPerson">
+              $0.00
+            </div>
+          </div>
+          <div class="card-item last">
+            <div class="card-label">
+              <p class="main">Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="amount" id="totalPerPerson">
+              $0.00
+            </div>
+          </div>
+
+          <button id="reset">RESET</button>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
